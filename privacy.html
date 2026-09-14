@@ -19,12 +19,13 @@
 <div class="wrap">
   <p class="brand">Skinote</p>
   <h1>Privacy Policy</h1>
-  <p class="meta">Effective date: June 17, 2026 · Last updated: June 17, 2026</p>
+  <p class="meta">Effective date: June 17, 2026 · Last updated: September 15, 2026</p>
 
   <div class="summary">
-    <strong>Privacy-first by design.</strong> All your entries — including photos — stay on your device.
-    We do not collect, transmit, store on our servers, sync, share, or sell your information.
-    There is no analytics, no advertising, and no third-party tracking.
+    <strong>Local content, limited anonymous usage data.</strong> Everything you enter stays on your device
+    and is never sent to us. The app sends a small set of anonymous usage events to our own
+    Cloudflare-hosted server so we can improve the app. There is no advertising, no third-party tracking,
+    and no third-party analytics SDK.
   </div>
 
   <h2>Who we are</h2>
@@ -36,8 +37,28 @@
   notes, and <strong>photos of affected skin areas</strong> (“your entries”). <strong>Your entries and photos are
   stored only locally on your device</strong> using Apple’s on-device database and the app’s protected file
   container. We never receive this data.</p>
-  <p>We do <strong>not</strong> collect: name, email, account credentials (the app has no account), location,
-  contacts, advertising identifiers, or usage analytics.</p>
+  <p>We do <strong>not</strong> collect your entries, photos, notes, health or other user content,
+  name, email address, account credentials (the app has no account), location, contacts, or advertising
+  identifiers through the app. The limited usage events described below are the only data sent to us.</p>
+
+  <h2>Anonymous usage analytics</h2>
+  <p>Skinote sends a small set of funnel events. An event name describes an internal action such as using a
+  core feature, viewing a result or Pro offer, starting or completing a purchase, restoring a purchase, or
+  interacting with a reminder. Not every version sends every event.</p>
+  <p>Each request contains the app identifier (<code>a</code>), app version (<code>v</code>), a random
+  installation identifier (<code>d</code>), event name (<code>e</code>), timestamp (<code>t</code>), and
+  a small properties object (<code>p</code>). Current properties are limited to fixed internal screen or
+  flow names, an App Store product identifier, subscription plan, and trial-eligibility flag where relevant.
+  They do not contain your entries, health information, photos, notes, or other free-form content.</p>
+  <p>The installation identifier is a random UUID generated on your device. It is not your Apple advertising
+  identifier (IDFA), Apple vendor identifier (IDFV), name, email address, or account ID. We use these events
+  only to understand aggregate feature use and funnel completion and to improve Skinote; never for advertising
+  or cross-app or cross-website tracking.</p>
+  <p>Cloudflare, Inc. hosts the endpoint as our infrastructure processor. Our Worker does not store source IP
+  addresses, User-Agent headers, raw event bodies, raw timestamps, or raw installation identifiers. It stores
+  daily aggregate counts and, for this app, a per-day HMAC-SHA-256 hash of the random identifier. The hash is
+  salted with the day and app identifier, so it changes each day. Cloudflare may process network metadata to
+  deliver and secure its service under its data-processing terms.</p>
 
   <h2>Photos</h2>
   <p>Photos you attach are saved only in the app’s on-device container with file protection. They are never
@@ -70,8 +91,38 @@
   from anyone.</p>
 
   <h2>Third parties</h2>
-  <p>The app uses only Apple system frameworks. There are no third-party SDKs, analytics, advertising networks, or
-  external servers.</p>
+  <p>Skinote has no third-party analytics or advertising SDKs. We use Cloudflare, Inc. only to host the
+  anonymous event endpoint and aggregated database described above. We do not sell these events, provide
+  them to third parties for their own purposes, use them for advertising, or use them to track you across
+  apps or websites.</p>
+
+  <h2>For users in the EU/EEA and UK (GDPR)</h2>
+  <!-- controller postal address: to be added -->
+  <p><strong>Controller.</strong> The controller for the limited usage analytics is Ryosuke Igarashi
+  (Softgrove), Japan. Contact: <a href="mailto:softgrove@duck.com">softgrove@duck.com</a>.</p>
+  <p><strong>Purposes and legal bases.</strong> We process the limited usage events to understand aggregate
+  feature use and improve the app, based on our legitimate interests under Article 6(1)(f) GDPR. Your
+  on-device content is not sent to or processed by us. Purchases are processed by Apple; see
+  <a href="https://www.apple.com/legal/privacy/">Apple’s Privacy Policy</a>. If you contact us, we process the
+  information you send to answer your request, also based on our legitimate interests.</p>
+  <p><strong>Recipients and international transfers.</strong> Cloudflare, Inc. processes the usage events for
+  us as hosting provider on its global network. This may involve transfers outside the EU/EEA or UK,
+  including to the United States, using safeguards such as the European Commission’s Standard Contractual
+  Clauses and the UK transfer addendum where applicable.</p>
+  <p><strong>Retention.</strong> We do not retain raw events or raw installation identifiers. Daily aggregate
+  counts and per-day HMAC hashes are retained in a form not designed to identify a person. The current server
+  code has no automatic deletion period for those aggregate records. On-device content remains until you
+  delete it or the app. Correspondence is kept only as long as reasonably needed to answer and document the
+  request.</p>
+  <p><strong>Your rights.</strong> Subject to applicable law, you may request access, rectification, erasure,
+  restriction, objection, and data portability by emailing
+  <a href="mailto:softgrove@duck.com">softgrove@duck.com</a>. Because the random installation identifier is
+  not linked to your identity and the server does not retain the raw identifier, we may be unable to identify
+  records as relating to you. You may also lodge a complaint with the data-protection supervisory authority
+  in your country of residence or work, or where you believe an infringement occurred.</p>
+  <p>Providing usage events is not a contractual or statutory requirement; the app’s core operation does not
+  depend on a successful telemetry request. We do not use automated decision-making or profiling that
+  produces legal or similarly significant effects.</p>
 
   <h2>Changes</h2>
   <p>We may update this policy. Material changes will be reflected here with a new “Last updated” date.</p>
